@@ -1,4 +1,4 @@
-package com.enespolat.dto;
+package com.enespolat.tutorials.dto;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;

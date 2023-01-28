@@ -1,4 +1,4 @@
-package com.enespolat.bean;
+package com.enespolat.tutorials.bean;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;

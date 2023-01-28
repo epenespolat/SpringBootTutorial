@@ -1,6 +1,6 @@
-package com.enespolat.controller;
+package com.enespolat.tutorials.controller;
 
-import com.enespolat.dto.TeacherDto;
+import com.enespolat.tutorials.dto.TeacherDto;
 import jakarta.validation.Valid;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;

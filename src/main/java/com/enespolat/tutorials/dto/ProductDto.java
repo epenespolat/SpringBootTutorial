@@ -1,4 +1,4 @@
-package com.enespolat.dto;
+package com.enespolat.tutorials.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

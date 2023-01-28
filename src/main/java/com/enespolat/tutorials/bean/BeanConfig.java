@@ -1,6 +1,6 @@
-package com.enespolat.bean;
+package com.enespolat.tutorials.bean;
 
-import com.enespolat.dto.BeanDto;
+import com.enespolat.tutorials.dto.BeanDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
