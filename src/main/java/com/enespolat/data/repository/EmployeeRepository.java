@@ -1,4 +1,4 @@
-package com.enespolat.repository;
+package com.enespolat.data.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;

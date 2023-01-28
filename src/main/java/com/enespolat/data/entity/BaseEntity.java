@@ -1,4 +1,4 @@
-package com.enespolat.entity;
+package com.enespolat.data.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
