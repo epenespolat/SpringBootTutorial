@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
@@ -16,9 +17,12 @@ public class ThymeLeafController {
 
     // Optional
     // http://localhost:8080
-    @GetMapping({"/","index"})
-    public String index(){return "index";};
+    @GetMapping({"/", "index"})
+    public String index() {
+        return "index";
+    }
 
+    ;
 
 
     // http://localhost:8080/thymeleaf1
@@ -85,16 +89,26 @@ public class ThymeLeafController {
 
 
     // http://localhost:8080/thymeleaf7/
-    @GetMapping({"/thymeleaf7","/thymeleaf7/","/thymeleaf7/{id}"})
-    public String getThymeleaf7ModelObject(Model model, @PathVariable(name ="id", required = false) Long id) {
-        if (id!=null){
-            model.addAttribute("key_model1", "id: " +id);
-        }else {
+    @GetMapping({"/thymeleaf7", "/thymeleaf7/", "/thymeleaf7/{id}"})
+    public String getThymeleaf7ModelObject(Model model, @PathVariable(name = "id", required = false) Long id) {
+        if (id != null) {
+            model.addAttribute("key_model1", "id: " + id);
+        } else {
             model.addAttribute("key_model1", "id bulunamadı");
         }
-
-
         return "thymeleaf7";
     }
 
+    // http://localhost:8080/thymeleaf8?id=4&name=enespolat
+    @GetMapping({"/thymeleaf8",})
+    public String getThymeleaf8ModelObject(Model model,
+                                           @RequestParam(name = "id", required = false, defaultValue = "0") Long id,
+                                           @RequestParam(name = "name") String adi) {
+        if (id != null) {
+            model.addAttribute("key_model1", "id: " + id + " adi soyadi: " + adi);
+        } else {
+            model.addAttribute("key_model1", "id bulunamadı");
+        }
+        return "thymeleaf8";
+    }
 }
