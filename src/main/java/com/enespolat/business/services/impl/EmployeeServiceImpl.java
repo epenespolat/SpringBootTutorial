@@ -81,7 +81,7 @@ public class EmployeeServiceImpl implements EmployeeServices {
     public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id) throws Throwable {
         EmployeeEntity employee= (EmployeeEntity) employeeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " +id));
-        employeeRepository.deleteById(employee);
+        employeeRepository.deleteById(employee.getId());
         Map<String,Boolean> response=new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
